@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <h1>Generate a <br><span>Random Password</span></h1>
+        <div class="main">
+            <input type="text" placeholder="password" id="password" readonly>
+            <span><ion-icon name="copy-outline" onclick="copyPassword()"></ion-icon></span>
+        </div>
+        <div class="slider-container">
+            <label for="lengthSlider">Password Length: <span id="lengthValue">10</span></label>
+            <input type="range" id="lengthSlider" min="6" max="12" value="10" oninput="updateLength(this.value)">
+        </div>
+        <button onclick="generatePassword()"><span><ion-icon name="flash"></ion-icon></span>Generate Password</button>
+    </div>
+
+    <!-- Popup Notification -->
+    <div id="popup" class="popup">Password Copied!</div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-left">
+            <p>Mohammad Shahabuddin &copy; All Rights Reserved.</p>
+        </div>
+        <div class="footer-right">
+            <a href="https://github.com/xshshahab" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+            <a href="https://linkedin.com/in/mdshahabuddin82/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+            <a href="https://twitter.com/xsh_shahab" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

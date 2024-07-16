@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer-left {
+    text-align: center;
+    flex: 1;
+}
+
+.footer-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.footer-right a {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0;
+    }
+
+    .footer-left {
+        order: 1; /* Moves to bottom */
+        margin-bottom: 10px;
+    }
+
+    .footer-right {
+        order: 2; /* Moves to top */
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <footer class="footer">
+        <div class="footer-left">
+            <p>&copy; All Rights Reserved Mohammad Shahabuddin</p>
+        </div>
+        <div class="footer-right">
+            <a href="https://github.com/yourusername" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+            <a href="https://twitter.com/yourusername" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+        </div>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
